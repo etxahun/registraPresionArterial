@@ -1,0 +1,17 @@
+body {
+  padding: 70px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+/* Etxahun */
+.listahome td,th {
+   text-align: center;
+}
+
+.view tr:first-child td {
+  font-weight:bolder;
+}

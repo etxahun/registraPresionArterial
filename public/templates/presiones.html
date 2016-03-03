@@ -1,0 +1,43 @@
+<!--Listamos en una tabla las presiones arteriales medidas-->
+<div id="presion-list" class="row">
+	<div class="col-sm-12 col-md-8 col-md-offset-1">
+		<div class="row">
+			<p>Añadir nuevos valores de presión y pulsación cardíaca:</p>
+			<a ui-sref="newPresion" class="btn btn-primary btn-md nodecoration">
+				<span class="glyphicon glyphicon-new-window"></span> Añdir Medida
+			</a>
+		</div>
+		<br>
+		<table class="listahome table table-striped table-condensed">
+			<thead>
+				<tr>
+					<th>Presión Sistólica (Alta)</th>
+					<th>Presión Diastólica (Baja)</th>
+					<th>Pulsaciones</th>
+					<th>Fecha</th>
+					<!--<th style="width:20px;">Acciones</th>-->
+					<th colspan="2" class="text-center">Acciones</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="presion in presiones | orderBy:'updated_at':true">
+					<td>{{presion.alta}}</td>
+					<td>{{presion.baja}}</td>
+					<td>{{presion.pulsaciones}}</td>
+					<td>{{presion.updated_at | date:'dd-MM-yyyy'}}</td>
+<!--
+					<td>
+						<a class="btn btn-sm btn-primary" ui-sref="viewPresion({id:presion._id})">View</a>
+					</td>
+-->
+					<td>
+						<a class="btn btn-sm btn-primary"  ui-sref="editPresion({id:presion._id})">Edit</a>
+					</td>
+					<td>
+						<a class="btn btn-sm btn-danger"  ng-click="deletePresion(presion)">Delete</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

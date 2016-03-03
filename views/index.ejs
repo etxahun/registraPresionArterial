@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app="presionApp">
+<head>
+	<base	href="/">
+	<meta charset="utf-8">
+	<meta	http-equiv="X-UA-Compatible"	content="IE=edge">
+	<title>
+		<%= title %>
+	</title>
+	<meta	name="description"	content="Aplicación que registra los datos de presión arterial y pulsaciones cardíacas.">
+	<meta	name="viewport"	content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/bower_components/nvd3/build/nv.d3.css">
+	<link rel="stylesheet" href="/stylesheets/style.css">
+
+	<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="/bower_components/angular/angular.js"></script>
+	<script src="/bower_components/d3/d3.js"></script>
+	<script src="/bower_components/nvd3/build/nv.d3.js"></script>
+	<script src="/bower_components/angular-nvd3/dist/angular-nvd3.js"></script>
+	<script src="/bower_components/moment/min/moment.min.js"></script>
+	<script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script src="/bower_components/angular-resource/angular-resource.min.js"></script>
+
+  <!-- AngularJS application-->
+	<script src="/javascripts/app.js"></script>
+	<script src="/javascripts/controllers.js"></script>
+	<script src="/javascripts/services.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container-fluid" id="navfluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigationbar" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" ui-sref="presiones">Registro de Presiones</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="navigationbar">
+				<ul class="nav navbar-nav">
+					<li><a ui-sref="presiones">Histórico</a></li>
+					<li><a ui-sref="graficas">Gráficas</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<!--<li><a href="#">Link</a></li>-->
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+
+	<div class="container">
+		<div ui-view></div> <!-- This is where our views will load -->
+	</div>
+</body>
+</html>
