@@ -1,6 +1,6 @@
 # registraPresionArterial
 
-Simple NodeJS + MongoDB + AngularJS application for blood pressure and heart rate registration.
+MongoDB based REST API  and a simple SPA based on NodeJS + AngularJS  for blood pressure and heart rate registration.
 
 ### Usage
 
