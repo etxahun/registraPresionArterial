@@ -1,7 +1,7 @@
 <!--Listamos en una tabla las presiones arteriales medidas-->
 <div id="presion-list" class="row">
-	<div class="col-sm-12 col-md-8 col-md-offset-1">
-		<div class="row">
+	<div class="col-sm-12 col-md-8 col-md-offset-2">
+		<div class="row nuevamedida">
 			<p>Añadir nuevos valores de presión y pulsación cardíaca:</p>
 			<a ui-sref="newPresion" class="btn btn-primary btn-md nodecoration">
 				<span class="glyphicon glyphicon-new-window"></span> Añadir Medida
@@ -31,10 +31,10 @@
 					</td>
 -->
 					<td>
-						<a class="btn btn-sm btn-primary"  ui-sref="editPresion({id:presion._id})">Edit</a>
+						<a class="btn btn-sm btn-primary"  ui-sref="editPresion({id:presion._id})"><span class="glyphicon glyphicon-edit"></span> Editar</a>
 					</td>
 					<td>
-						<a class="btn btn-sm btn-danger"  ng-click="deletePresion(presion)">Delete</a>
+						<a class="btn btn-sm btn-danger"  ng-click="deletePresion(presion)"><span class="glyphicon glyphicon-remove-sign"></span> Eliminar</a>
 					</td>
 				</tr>
 			</tbody>
